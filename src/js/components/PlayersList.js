@@ -34,7 +34,8 @@ const mapStateToProps = state => (
 );
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({addPlayer: addPlayer, removePlayer: removePlayer, updatePlayerScore: updatePlayerScore, editPlayerName: editPlayerName}, dispatch)
+    return bindActionCreators({addPlayer: addPlayer, removePlayer: removePlayer, updatePlayerScore:
+      updatePlayerScore, editPlayerName: editPlayerName}, dispatch)
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayersList);

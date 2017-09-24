@@ -16,7 +16,8 @@ const AddPlayerForm = (props) => {
       <h4>Add Players</h4>
       <div className="form-group">
         <label htmlFor="name">Player Name</label>
-        <input ref={input => _name = input} className="form-control" id="name" type='text' required />
+        <input ref={input => _name = input} className="form-control" id="name"
+          type='text' required />
         <button type="submit" className="btn btn-primary">Add Player</button>
       </div>
     </form>

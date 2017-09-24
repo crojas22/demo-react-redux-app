@@ -22,15 +22,19 @@ const AddDayForm = ({country, date, vacation, work, onNewDay}) => {
     <form onSubmit={submit.bind(this)}>
       <div className="form-group">
         <label htmlFor="location">Location</label>
-        <input ref={input => _location = input} className="form-control" id="location"type='text' defaultValue={country} required />
+          <input ref={input => _location = input} className="form-control"
+          id="location"type='text' defaultValue={country} required />
         <label htmlFor="date">Date</label>
-        <input ref={input => _date = input} id="date" className="form-control" type='date' defaultValue={date} required />
+          <input ref={input => _date = input} id="date" className="form-control"
+          type='date' defaultValue={date} required />
         <label htmlFor="vacation" className="form-check-label">
-          <input ref={input => _vacation = input} className="form-check-input" name="example" type='radio' id="vacation" defaultChecked={vacation} /> Vacation
+          <input ref={input => _vacation = input} className="form-check-input"
+          name="example" type='radio' id="vacation" defaultChecked={vacation} /> Vacation
         </label>
         <br />
         <label htmlFor="work" className="form-check-label">
-          <input ref={input => _work = input} className="form-check-input" name="example" type='radio' id="work" defaultChecked={work} /> Work
+          <input ref={input => _work = input} className="form-check-input"
+          name="example" type='radio' id="work" defaultChecked={work} /> Work
         </label>
       </div>
       <button type="submit" className="btn btn-primary">Add Day</button>
