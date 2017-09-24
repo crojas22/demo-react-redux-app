@@ -1,6 +1,6 @@
 # React/Redux App
 
-Demo app using React library. It is not an example of writing best-practice makeup or React, it's just the bare minimum to demonstrate the use of:
+Demo app using React/Redux library that will demonstrate changing state with forms, adding players, keeping score of individual players etc. It is not an example of writing best-practice makeup or React, it's just the bare minimum to demonstrate the use of:
 * create-react-app
 * Redux
 * Redux Thunk
