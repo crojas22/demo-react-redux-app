@@ -6,6 +6,7 @@ Demo app using React library. It is not an example of writing best-practice make
 * Redux Thunk
 * React Router
 * React Icons
+* Use of fetch to get 10 random users from RANDOM USER GENERATOR API
 
 ### Instalation
 * create-react-app my-app will take care of everything needed for React
