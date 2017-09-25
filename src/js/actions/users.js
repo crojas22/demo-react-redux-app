@@ -25,7 +25,7 @@ export const itemsFetchData = (url) => {
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
-                dispatch(itemsIsLoading(false));
+                dispatch(itemsIsLoading(false))
                 return response;
             })
             .then((response) => response.json())

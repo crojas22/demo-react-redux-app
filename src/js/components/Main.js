@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import Header from './header/Header';
+import Header from './Header';
 import List from './List';
 import Count from './Count';
 import AddDayForm from './AddDayForm';
