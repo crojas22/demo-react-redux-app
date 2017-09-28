@@ -2,7 +2,7 @@ let nextId = 0;
 
 export const addDay = (item) => {
   return {
-    type: "ADD_DAY",
+    type: 'ADD_DAY',
     payload: {
       ...item,
       id: nextId++
@@ -12,7 +12,7 @@ export const addDay = (item) => {
 
 export const removeDay = (index) => {
   return {
-    type: "REMOVE_DAY",
+    type: 'REMOVE_DAY',
     index
-  }
-}
+  };
+};

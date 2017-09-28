@@ -11,31 +11,31 @@ export default class Stopwatch extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.onTick)
+    this.interval = setInterval(this.onTick);
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
   }
 
   onStart = () => {
     this.setState({
       running: true,
       previouseTime: Date.now(),
-    })
+    });
   }
 
   onStop = () => {
     this.setState({
       running: false,
-    })
+    });
   }
 
   onReset = () => {
     this.setState({
       elapsedTime: 0,
       previouseTime: Date.now(),
-    })
+    });
   }
 
   onTick = () => {
@@ -44,7 +44,7 @@ export default class Stopwatch extends Component {
       this.setState({
         elapsedTime: this.state.elapsedTime + (now - this.state.previouseTime),
         previouseTime: Date.now(),
-      })
+      });
     }
   }
 
@@ -56,9 +56,9 @@ export default class Stopwatch extends Component {
         <h4> Seconds: {seconds} </h4>
         {
           this.state.running ?
-          <button onClick={this.onStop.bind(this)} className="btn btn-warning">Stop</button>
-          :
-          <button onClick={this.onStart.bind(this)} className="btn btn-success">Start</button>
+            <button onClick={this.onStop.bind(this)} className="btn btn-warning">Stop</button>
+            :
+            <button onClick={this.onStart.bind(this)} className="btn btn-success">Start</button>
         }
         <button onClick={this.onReset} className="btn btn-danger">Reset</button>
       </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 
 const percentToDecimal = (decimal) => {
-  return ((decimal * 100) + '%')
-}
+  return ((decimal * 100) + '%');
+};
 
 const calcGoalProgress = (total, goal) => {
-  return percentToDecimal(total/goal)
-}
+  return percentToDecimal(total/goal);
+};
 
 const Count = ({total=10, vacation=4, work=15, goal=100, playersLength, totalPoints}) => (
   <div>
@@ -31,6 +31,6 @@ const Count = ({total=10, vacation=4, work=15, goal=100, playersLength, totalPoi
       </div>
     </div>
   </div>
-)
+);
 
 export default Count;

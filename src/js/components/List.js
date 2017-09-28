@@ -7,8 +7,8 @@ import {bindActionCreators} from 'redux';
 
 const List = (props) => {
   const filteredDays = (!props.filter || !props.filter.match(/vacation|work/)) ?
-        props.days :
-        props.days.filter(day => day[props.filter])
+    props.days :
+    props.days.filter(day => day[props.filter])
   return(
     <table className="table">
       <thead className="thead-default">
@@ -35,22 +35,18 @@ const List = (props) => {
       <tbody>
         {filteredDays.map((day, index) => (
           <Row  key={index}
-                {...day}
-                index={index}
-                remove={props.removeDay}
-                // country={day.country}
-                // date={day.date}
-                // vacation={day.vacation}
-                // work={day.work}
+            {...day}
+            index={index}
+            remove={props.removeDay}
           />
         ))}
       </tbody>
     </table>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({removeDay: removeDay}, dispatch)
+  return bindActionCreators({removeDay: removeDay}, dispatch);
 };
 
 

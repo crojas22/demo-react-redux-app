@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const style ={
   width: '20rem'
-}
+};
 
 const Users = (props) => (
   <div className="card" style={style}>
@@ -13,6 +13,6 @@ const Users = (props) => (
       <p className="card-text">{`Contact Number: ${props.phone}`}</p>
     </div>
   </div>
-)
+);
 
 export default Users;

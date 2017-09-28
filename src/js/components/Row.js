@@ -19,6 +19,6 @@ const Row = ({location, date, vacation, work, remove, index}) => (
       <button onClick={() => remove(index)} className="btn btn-primary">x</button>
     </td>
   </tr>
-)
+);
 
 export default Row;

@@ -9,6 +9,6 @@ const reducer =  combineReducers({
   itemsHasErrored,
   itemsIsLoading,
   players
-})
+});
 
 export default reducer;

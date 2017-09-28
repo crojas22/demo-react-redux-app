@@ -13,19 +13,19 @@ const PlayersList = (props) => {
       <AddPlayerForm addPlayer={props.addPlayer.bind(this)} />
       {props.players.map((player, index) => {
         return <Player
-                  index={index}
-                  name={player.name}
-                  score={player.score}
-                  key={player.name}
-                  isEditing={player.isEditing}
-                  updatePlayerScore={props.updatePlayerScore.bind(this)}
-                  removePlayer={props.removePlayer.bind(this)}
-                  editPlayerName={props.editPlayerName}
-                />
+          index={index}
+          name={player.name}
+          score={player.score}
+          key={player.name}
+          isEditing={player.isEditing}
+          updatePlayerScore={props.updatePlayerScore.bind(this)}
+          removePlayer={props.removePlayer.bind(this)}
+          editPlayerName={props.editPlayerName}
+        />;
       })}
     </div>
   );
-}
+};
 
 const mapStateToProps = state => (
   {
@@ -34,8 +34,8 @@ const mapStateToProps = state => (
 );
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({addPlayer: addPlayer, removePlayer: removePlayer, updatePlayerScore:
-      updatePlayerScore, editPlayerName: editPlayerName}, dispatch)
+  return bindActionCreators({addPlayer: addPlayer, removePlayer: removePlayer, updatePlayerScore:
+      updatePlayerScore, editPlayerName: editPlayerName}, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayersList);

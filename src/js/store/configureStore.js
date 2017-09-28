@@ -5,12 +5,11 @@ import reducer from '../reducers/index';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const configureStore = (initialState) => {
-    return createStore(
-        reducer,
-        initialState,
-        composeEnhancers(applyMiddleware(thunk)),
-
-    );
-}
+  return createStore(
+    reducer,
+    initialState,
+    composeEnhancers(applyMiddleware(thunk)),
+  );
+};
 
 export default configureStore;

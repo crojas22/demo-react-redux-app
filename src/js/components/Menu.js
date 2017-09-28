@@ -14,6 +14,6 @@ const Menu = () => (
     <Link to='/users'>Users <MdAccountBox /></Link>
     <Link to='/players'>Players <MdGames /></Link>
   </div>
-)
+);
 
 export default Menu;

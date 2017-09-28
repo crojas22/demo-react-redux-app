@@ -7,9 +7,9 @@ const AddPlayerForm = (props) => {
     e.preventDefault();
     props.addPlayer({
       name: _name.value
-    })
-    _name.value = ''
-  }
+    });
+    _name.value = '';
+  };
 
   return(
     <form onSubmit={submit.bind(this)}>
@@ -22,6 +22,6 @@ const AddPlayerForm = (props) => {
       </div>
     </form>
   );
-}
+};
 
 export default AddPlayerForm;

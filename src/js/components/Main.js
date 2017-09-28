@@ -13,7 +13,7 @@ import { addDay } from '../actions/calendar';
 class Main extends Component {
   countDays(filter) {
     return this.props.days.filter((day) =>
-      (filter) ? day[filter] : day).length
+      (filter) ? day[filter] : day).length;
   }
 
   // addDay(newDay) {
@@ -35,25 +35,25 @@ class Main extends Component {
         <Header title="React/Redux"/>
         <Menu />
         {
-          (this.props.location.pathname === "/") ?
-              <Count total={this.countDays()}
-                   vacation={this.countDays('vacation')}
-                   work={this.countDays('work')}
-                   playersLength={this.props.players.length}
-                   totalPoints={totalPoints}
-              /> :
-          (this.props.location.pathname === "/add-day") ?
+          (this.props.location.pathname === '/') ?
+            <Count total={this.countDays()}
+              vacation={this.countDays('vacation')}
+              work={this.countDays('work')}
+              playersLength={this.props.players.length}
+              totalPoints={totalPoints}
+            /> :
+            (this.props.location.pathname === '/add-day') ?
               <AddDayForm onNewDay={this.props.addDay.bind(this)}
               /> :
-          (this.props.location.pathname === "/users") ?
-              <UsersList
-              /> :
-          (this.props.location.pathname === "/players") ?
-              <PlayersList
-              /> :
-              <List days={this.props.days}
+          (this.props.location.pathname === '/users') ?
+                <UsersList
+                /> :
+                (this.props.location.pathname === '/players') ?
+                  <PlayersList
+                  /> :
+                  <List days={this.props.days}
                     filter={this.props.match.params.filter}
-              />
+                  />
         }
       </div>
     );
@@ -64,11 +64,11 @@ const mapStateToProps = state => {
   return {
     days: state.calendar,
     players: state.players
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({addDay: addDay}, dispatch)
+  return bindActionCreators({addDay: addDay}, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

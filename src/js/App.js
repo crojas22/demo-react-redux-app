@@ -15,6 +15,6 @@ const App = () => (
       <Route path='*' component={Whoops404} />
     </Switch>
   </main>
-)
+);
 
 export default App;
